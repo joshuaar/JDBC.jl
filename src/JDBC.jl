@@ -13,7 +13,7 @@ import Compat: IteratorSize, IteratorEltype, start, next, done
 
 export DriverManager, createStatement, prepareStatement, prepareCall, executeQuery, setFetchSize,
         getInt, getFloat, getString, getShort, getByte, getTime, getTimestamp, getDate,
-        getBoolean, getNString, getURL, setInt, setFloat, setString, setShort, setByte, setBoolean,
+        getBoolean, getString, getURL, setInt, setFloat, setString, setShort, setByte, setBoolean,
         getMetaData, getColumnCount, getColumnType, getColumnName, executeUpdate, execute, commit,
         rollback, setAutoCommit, getResultSet
 
@@ -559,14 +559,14 @@ global const get_method_dict = Dict(
         JDBC_COLTYPE_FLOAT => getFloat,
         JDBC_COLTYPE_INTEGER => getLong,
         # JDBC_COLTYPE_JAVA_OBJECT => 2000,
-        JDBC_COLTYPE_LONGNVARCHAR => getNString,
+        JDBC_COLTYPE_LONGNVARCHAR => getString,
         # JDBC_COLTYPE_LONGVARBINARY => -4,
         JDBC_COLTYPE_LONGVARCHAR => getString,
-        JDBC_COLTYPE_NCHAR => getNString,
+        JDBC_COLTYPE_NCHAR => getString,
         # JDBC_COLTYPE_NCLOB => 2011,
         # JDBC_COLTYPE_NULL => 0,
         JDBC_COLTYPE_NUMERIC => getFloat,
-        JDBC_COLTYPE_NVARCHAR => getNString,
+        JDBC_COLTYPE_NVARCHAR => getString,
         # JDBC_COLTYPE_OTHER => 1111,
         JDBC_COLTYPE_REAL => getFloat,
         # JDBC_COLTYPE_REF => 2006,
